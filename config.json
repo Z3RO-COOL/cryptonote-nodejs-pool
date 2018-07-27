@@ -121,7 +121,7 @@
         "poolFee": 0.8,
         "devDonation": 0.2,
         "networkFee": 0.0,
-        "fixBlockHeightRPC": false
+        "fixBlockHeightRPC": true
     },
 
     "api": {
