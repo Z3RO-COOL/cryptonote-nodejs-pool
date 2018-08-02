@@ -157,10 +157,12 @@ sudo apt-get install screen
 ```
 
 A few useful commands,hold ctrl+a then press:
+```
 C - new screen
 N - Next screen
 P - previous screen
 D - detach screen - always do this before closing the terminal 
+```
 
 'screen -r' in your new terminal will reattach screen
 
