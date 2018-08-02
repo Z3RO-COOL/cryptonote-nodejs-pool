@@ -156,15 +156,15 @@ It's worth installing screen or a similar service to keep the pool running once 
 sudo apt-get install screen
 ```
 
-A few useful commands,hold ctrl+a then press:
+A few useful commands, hold ctrl+a then press:
 ```
-C - new screen
-N - Next screen
-P - previous screen
-D - detach screen - always do this before closing the terminal 
+c - new screen
+n - next screen
+p - previous screen
+d - detach screen - always do this before closing the terminal 
 ```
 
-'screen -r' in your new terminal will reattach screen
+'screen -r' in your new terminal will re-attach screen
 
 
 
