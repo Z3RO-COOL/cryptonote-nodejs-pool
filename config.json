@@ -101,7 +101,7 @@
 
     "payments": {
         "enabled": true,
-        "interval": 1800,
+        "interval": 300,
         "maxAddresses": 50,
         "mixin": 7,
         "priority": 0,
@@ -110,7 +110,7 @@
         "minerPayFee" : true,
         "minPayment": 100,
         "maxPayment": 1000,
-        "maxTransactionAmount": 0,
+        "maxTransactionAmount": 100000,
         "denomination": 1
     },
 
