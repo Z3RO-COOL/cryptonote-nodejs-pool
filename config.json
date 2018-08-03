@@ -109,7 +109,7 @@
         "dynamicTransferFee": true,
         "minerPayFee" : true,
         "minPayment": 100,
-        "maxPayment": 10000,
+        "maxPayment": 1000,
         "maxTransactionAmount": 0,
         "denomination": 1
     },
@@ -118,8 +118,8 @@
         "enabled": true,
         "interval": 30,
         "depth": 10,
-        "poolFee": 0.8,
-        "devDonation": 0.2,
+        "poolFee": 2.0,
+        "devDonation": 0.0,
         "networkFee": 0.0,
         "fixBlockHeightRPC": true
     },
