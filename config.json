@@ -105,7 +105,7 @@
         "maxAddresses": 50,
         "mixin": 2,
         "priority": 0,
-        "transferFee": 0,
+        "transferFee": 10,
         "dynamicTransferFee": true,
         "minerPayFee" : true,
         "minPayment": 100,
@@ -118,9 +118,9 @@
         "enabled": true,
         "interval": 30,
         "depth": 10,
-        "poolFee": 2.0,
+        "poolFee": 1.9,
         "devDonation": 0.0,
-        "networkFee": 0.0,
+        "networkFee": 0.1,
         "fixBlockHeightRPC": true
     },
 
