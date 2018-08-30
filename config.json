@@ -66,7 +66,7 @@
         "varDiff": {
             "minDiff": 100,
             "maxDiff": 100000000,
-            "targetTime": 60,
+            "targetTime": 120,
             "retargetTime": 30,
             "variancePercent": 30,
             "maxJump": 100
@@ -109,8 +109,8 @@
         "dynamicTransferFee": true,
         "minerPayFee" : true,
         "minPayment": 100,
-        "maxPayment": 1000,
-        "maxTransactionAmount": 500000,
+        "maxPayment": 10000,
+        "maxTransactionAmount": 200000,
         "denomination": 1
     },
 
@@ -118,7 +118,7 @@
         "enabled": true,
         "interval": 30,
         "depth": 10,
-        "poolFee": 1.9,
+        "poolFee": 1.5,
         "devDonation": 0.0,
         "networkFee": 0.1,
         "fixBlockHeightRPC": true
@@ -138,7 +138,7 @@
         "sslCert": "./cert.pem",
         "sslKey": "./privkey.pem",
         "sslCA": "./chain.pem",
-        "trustProxyIP": false
+        "trustProxyIP": true
     },
 
     "daemon": {
