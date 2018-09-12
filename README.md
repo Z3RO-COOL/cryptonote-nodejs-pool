@@ -588,7 +588,26 @@ Explanation for each field:
 }
 ```
 
-#### 3) Start the pool
+#### 3) Setup the deamon & Container
+
+Before starting the pool you need to setup the deamon & create the container file that blocks will be paid to and miners will be paid from, our preferred method is to create a wallet in Zedwallet, then restore that walleton the pool server using the spend & view keys. This way you can manually send payemts from the pool wallet without having to acess the pool itself
+
+Start the pool deamon
+```
+./xariad --rpc-bind-port=11966
+```
+
+Restore the Container from spend & view keys
+```
+./xaria-service -w poolcontainer -p passw*** --view-key 20b71a4c969b58ef5466************************07c308be531b601ffe06 --spend-key e8f05b27114be*********************577116086a0b -g
+```
+
+Load the Container
+```
+./xaria-service -w poolcontainer -p passw*** --view-key 20b71a4c969b58ef5466************************07c308be531b601ffe06 --spend-key e8f05b27114be*********************577116086a0b
+```
+
+#### 4) Start the pool
 
 ```bash
 node init.js
@@ -625,7 +644,7 @@ sudo systemctl enable cryptonote-nodejs-pool.service
 sudo systemctl start cryptonote-nodejs-pool.service
 ```
 
-#### 4) Host the front-end
+#### 5) Host the front-end
 
 Simply host the contents of the `website_example` directory on file server capable of serving simple static files.
 
@@ -670,7 +689,7 @@ var defaultLang = 'en';
 
 ```
 
-#### 5) Customize your website
+#### 6) Customize your website
 
 The following files are included so that you can customize your pool website without having to make significant changes
 to `index.html` or other front-end files thus reducing the difficulty of merging updates with your own changes:
