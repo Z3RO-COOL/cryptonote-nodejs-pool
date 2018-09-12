@@ -191,31 +191,31 @@ Explanation for each field:
 "poolHost": "your.pool.host",
 
 /* Used for storage in redis so multiple coins can share the same redis instance. */
-"coin": "graft",
+"coin": "Xaria",
 
 /* Used for front-end display */
-"symbol": "GRFT",
+"symbol": "XARI",
 
 /* Minimum units in a single coin, see COIN constant in DAEMON_CODE/src/cryptonote_config.h */
-"coinUnits": 10000000000,
+"coinUnits": 100,
 
 /* Number of coin decimals places for notifications and front-end */
-"coinDecimalPlaces": 4,
+"coinDecimalPlaces": 2,
   
 /* Coin network time to mine one block, see DIFFICULTY_TARGET constant in DAEMON_CODE/src/cryptonote_config.h */
 "coinDifficultyTarget": 120,
 
 /* Set daemon type. Supported values: default, forknote (Fix block height + 1), bytecoin (ByteCoin Wallet RPC API) */
-"daemonType": "default",
+"daemonType": "bytecoin",
 
 /* Set Cryptonight algorithm settings.
    Supported algorithms: cryptonight (default). cryptonight_light and cryptonight_heavy
    Supported variants for "cryptonight": 0 (Original), 1 (Monero v7), 3 (Stellite / XTL)
    Supported variants for "cryptonight_light": 0 (Original), 1 (Aeon v7), 2 (IPBC)
    Supported blob types: 0 (Cryptonote), 1 (Forknote v1), 2 (Forknote v2), 3 (Cryptonote v2 / Masari) */
-"cnAlgorithm": "cryptonight",
+"cnAlgorithm": "cryptonight_light",
 "cnVariant": 1,
-"cnBlobType": 0,
+"cnBlobType": 2,
 
 /* Logging */
 "logging": {
@@ -252,10 +252,10 @@ Explanation for each field:
     "clusterForks": "auto",
 
     /* Address where block rewards go, and miner payments come from. */
-    "poolAddress": "GBqRuitSoU3PFPBAkXMEnLdBRWXH4iDSD6RDxnQiEFjVJhWUi1UuqfV5EzosmaXgpPGE6JJQjMYhZZgWY8EJQn8jQTsuTit",
+    "poolAddress": "XaxyxSsAqn5K6hU1gUB2tcAa4zuJmJw1J6dNoCA4yJAJPq9ydecBLeXLAKUDwH5MSjfV2bH4j2Qjr7c8pB6uMYjY3oSnE5PcKo",
 
     /* This is the integrated address prefix used for miner login validation. */
-    "intAddressPrefix": 91,
+    "intAddressPrefix": null,
 
     /* Poll RPC daemons for new blocks every this many milliseconds. */
     "blockRefreshInterval": 1000,
@@ -354,14 +354,14 @@ Explanation for each field:
 /* Module that sends payments to miners according to their submitted shares. */
 "payments": {
     "enabled": true,
-    "interval": 300, // How often to run in seconds
+    "interval": 1800, // How often to run in seconds
     "maxAddresses": 50, // Split up payments if sending to more than this many addresses
-    "mixin": 5, // Number of transactions yours is indistinguishable from
+    "mixin": 2, // Number of transactions yours is indistinguishable from
     "priority": 0, // The transaction priority    
-    "transferFee": 4000000000, // Fee to pay for each transaction
+    "transferFee": 10, // Fee to pay for each transaction
     "dynamicTransferFee": true, // Enable dynamic transfer fee (fee is multiplied by number of miners)
     "minerPayFee" : true, // Miner pays the transfer fee instead of pool owner when using dynamic transfer fee
-    "minPayment": 100000000000, // Miner balance required before sending payment
+    "minPayment": 10, // Miner balance required before sending payment
     "maxPayment": null, // Maximum miner balance allowed in miner settings
     "maxTransactionAmount": 0, // Split transactions by this amount (to prevent "too big transaction" error)
     "denomination": 10000000000 // Truncate to this precision and store remainder
@@ -407,13 +407,13 @@ Explanation for each field:
 /* Coin daemon connection details (default port is 18981) */
 "daemon": {
     "host": "127.0.0.1",
-    "port": 18981
+    "port": 11966
 },
 
 /* Wallet daemon connection details (default port is 18980) */
 "wallet": {
     "host": "127.0.0.1",
-    "port": 18982
+    "port": 8070
 },
 
 /* Redis connection info (default port is 6379) */
