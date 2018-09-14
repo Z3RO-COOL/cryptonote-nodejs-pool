@@ -604,7 +604,7 @@ Restore the Container from spend & view keys
 
 Load the Container
 ```
-./xaria-service -w poolcontainer -p passw*** --view-key 20b71a4c969b58ef5466************************07c308be531b601ffe06 --spend-key e8f05b27114be*********************577116086a0b
+./xaria-service --container-file=poolcontainer --container-password=****** --daemon-port=11966 --bind-port=8070 --rpc-legacy-security
 ```
 
 #### 4) Start the pool
